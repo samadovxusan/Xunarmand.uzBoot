@@ -12,7 +12,7 @@ namespace FoodBoot.Writ_json
 {
     static class Writ_Json
     {
-       static string paht = @"D:\\C#projects\\NajotTalim\\Bootcamp_N11\\FoodBoot\\FoodBoot\\Path\\Users.txt";
+       static string paht = @"C:\projects\Xunarmand.Backend\Xunarmand.Api\wwwroot\User\Users.txt";
         public static void Write(Contact contact)
         {
             var data = File.ReadAllText(paht);

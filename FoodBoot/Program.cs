@@ -18,7 +18,7 @@ using System.IO;
 internal class Program
 {
     public static long id_user;
-    public static List<long> UserIds = new List<long>() {986905197};
+    public static List<long>  UserIds = new List<long>() {986905197};
     public static List<string> Savatcha = new List<string>() {};
     //public static List<long> Savatlist = new List<>() {};
     private static async Task Main(string[] args)
@@ -321,39 +321,13 @@ async Task HandleCallbackQueryAsync(ITelegramBotClient botClient, Update update,
 
                 Message sentMessage = await botClient.SendTextMessageAsync(
                     chatId: update.Message.Chat.Id,
-                    text: "Who or Where are you?",
+                    text: "Salom Qalysiz Contack Kiriting?",
                     replyMarkup: replyKeyboardMarkup,
                     cancellationToken: cancellationToken);
             }
             if (update.Message.Type == MessageType.Contact && update.Message.Contact != null)
             {
-                Writ_Json.Write(update.Message.Contact);
-                Message sentMessage = await botClient.SendTextMessageAsync(
-                 chatId: update.Message.Chat.Id,
-                 text: "Emil kiriting",
-                 cancellationToken: cancellationToken);
-            }
-
-
-            var index = update.Message.Text.IndexOf("@");
-            if (index != -1)
-            {
-                var domain = update.Message.Text.Substring(index);
-                if (domain == "@gmail.com")
-                {
-
-                    update.Message.Text.EmailSend();
-                    Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: update.Message.Chat.Id,
-                    text: "Emailingizga Code Jonatildi Shuni Kiriting ",
-                    cancellationToken: cancellationToken);
-
-                }
-            }
-            //Posword
-            if (EmailSender.possword == update.Message.Text)
-            {
-                var id = UserIds.FirstOrDefault(x =>  x == update.Message.Chat.Id);
+                 var id = UserIds.FirstOrDefault(x =>  x == update.Message.Chat.Id);
                 if (id != 0)
                 {
                         var replyKeyboard = new ReplyKeyboardMarkup(
@@ -361,7 +335,7 @@ async Task HandleCallbackQueryAsync(ITelegramBotClient botClient, Update update,
                   {
                         new KeyboardButton[]
                         {
-                            new KeyboardButton("Category"),
+                            new KeyboardButton("Menu"),
                             new KeyboardButton("Product"),
                             new KeyboardButton("PayType"),
                         },
@@ -379,7 +353,7 @@ async Task HandleCallbackQueryAsync(ITelegramBotClient botClient, Update update,
 
                         Message sentMessage = await botClient.SendTextMessageAsync(
                             chatId: update.Message.Chat.Id,
-                            text: "Admin Hushkelibsiz",
+                            text: "Hushkelibsiz  Kategoriyni Tanlang",
                             replyMarkup: replyKeyboard,
                             cancellationToken: cancellationToken);
                 }
@@ -387,16 +361,15 @@ async Task HandleCallbackQueryAsync(ITelegramBotClient botClient, Update update,
                 {
 
                     var replyKeyboard = new ReplyKeyboardMarkup(
-            new List<KeyboardButton[]>()
+                new List<KeyboardButton[]>()
             {
                         new KeyboardButton[]
                         {
-                            new KeyboardButton("Foods"),
-                            new KeyboardButton("Drincs"),
+                            new KeyboardButton("Menu"),
+                            new KeyboardButton("Aloqa"),
                         },
                         new KeyboardButton[]
                         {
-                            new KeyboardButton("Ice cream"),
                             new KeyboardButton("Savat📥"),
                             new KeyboardButton("All Order Pdf"),
                         },
@@ -411,7 +384,25 @@ async Task HandleCallbackQueryAsync(ITelegramBotClient botClient, Update update,
                      cancellationToken: cancellationToken);
 
                 }
+              
             }
+
+
+            // var index = update.Message.Text.IndexOf("@");
+            // if (index != -1)
+            // {
+            //     var domain = update.Message.Text.Substring(index);
+            //     if (domain == "@gmail.com")
+            //     {
+            //         update.Message.Text.EmailSend();
+            //         Message sentMessage1 = await botClient.SendTextMessageAsync(
+            //             chatId: update.Message.Chat.Id,
+            //             text: "Emailingizga Code Jonatildi Shuni Kiriting ",
+            //             cancellationToken: cancellationToken);
+            //     }
+            // }
+            //Posword
+        
 
 
             //exit
