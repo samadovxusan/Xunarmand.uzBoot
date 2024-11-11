@@ -12,7 +12,8 @@ namespace FoodBoot.Writ_json
 {
     static class Writ_Json
     {
-       static string paht = @"C:\projects\Xunarmand.Backend\Xunarmand.Api\wwwroot\User\Users.txt";
+        
+       static string paht = @"C:\projects\Xunarmand\Xunarmand.Api\wwwroot\User\Users.txt";
         public static void Write(Contact contact)
         {
             var data = File.ReadAllText(paht);

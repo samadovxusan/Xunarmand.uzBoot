@@ -1,6 +1,4 @@
-﻿using DBContexts.Entity;
-using DBContexts.Select;
-using FoodBoot.Writ_json;
+﻿using FoodBoot.Writ_json;
 using QuestPDF.Infrastructure;
 using System.Diagnostics;
 using System.Linq;
@@ -22,26 +20,28 @@ internal class Program
     public static List<string> Savatcha = new List<string>() { };
     public static List<string> Demaxod = new List<string>()
     {
-        "https://backend.xunarmand.uz/images/oshxona1.png",
-        "https://backend.xunarmand.uz/images/oshxona2.png",
-        "https://backend.xunarmand.uz/images/2+qozon.png",
-        "https://backend.xunarmand.uz/images/di1.png",
+       "https://backend.xunarmand.uz//images//2+qozon.png",
+        "https://backend.xunarmand.uz//images//3+qozon.png",
+        "https://backend.xunarmand.uz//images//di1.jpg",
+        "https://backend.xunarmand.uz//images//kafeta.png",
+        "https://backend.xunarmand.uz//images//oshxona+tandir.png",
+        "https://backend.xunarmand.uz//images//vitrena.png",
     };
     public static List<string> Profnastil = new List<string>()
     {
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 110719.png",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 110741.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 111629.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 111640.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 111813.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 111843.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 113819.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 092652.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 113836.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 113909.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 113938.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 114142.jpg",
-        "https://backend.xunarmand.uz/images/Screenshot 2024-09-26 114216.jpg",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 110719.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 110741.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 111629.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 111640.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 111813.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 111843.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 113819.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 092652.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 113836.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 113909.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 113938.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 114142.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 114216.png",
 
         
         
@@ -51,63 +51,59 @@ internal class Program
     };
     public static List<string> Turuba = new List<string>()
     {
-        "https://backend.xunarmand.uz/images/mokri.png",
-        "https://backend.xunarmand.uz/images/turba96kok.jpg",
-        "https://backend.xunarmand.uz/images/turba96kok.jpg",
-        "https://backend.xunarmand.uz/images/turba96oq2.jpg",
-        "https://backend.xunarmand.uz/images/turba96qaymo.jpg",
-        "https://backend.xunarmand.uz/images/turba96qizl.jpg",
-        "https://backend.xunarmand.uz/images/turba96yashil.jpg",
-        "https://backend.xunarmand.uz/images/vitrina.jpg",
-        "https://backend.xunarmand.uz/images/vitrina2.jpg",
-        "https://backend.xunarmand.uz/images/turbaba+shapka.jpg",
-        "https://backend.xunarmand.uz/images/turbala.jpg",
+        "https://backend.xunarmand.uz//images//mokri.png",
+        "https://backend.xunarmand.uz//images//turba96kok.png",
+        "https://backend.xunarmand.uz//images//turba96oq2.png",
+        "https://backend.xunarmand.uz//images//turba96qaymo.png",
+        "https://backend.xunarmand.uz//images//turba96qizl.png",
+        "https://backend.xunarmand.uz//images//turba96yashil.png",
+        "https://backend.xunarmand.uz//images//vitrina.png",
+        "https://backend.xunarmand.uz//images//vitrina2.png",
+        "https://backend.xunarmand.uz//images//turbaba+shapka.png",
+        "https://backend.xunarmand.uz//images//turbala.png",
         
         
     }; 
 
     public static List<string> Vintilatsa = new List<string>()
     {
-        "https://backend.xunarmand.uz/images/1.png",
-        "https://backend.xunarmand.uz/images/2.png",
-        "https://backend.xunarmand.uz/images/3.png",
-        "https://backend.xunarmand.uz/images/4.png",
-        "https://backend.xunarmand.uz/images/5.png",
-        "https://backend.xunarmand.uz/images/6.png",
-        "https://backend.xunarmand.uz/images/7.png",
-        "https://backend.xunarmand.uz/images/8.png",
-        "https://backend.xunarmand.uz/images/9.png",
-        "https://backend.xunarmand.uz/images/10.png",
-        "https://backend.xunarmand.uz/images/11.png",
-        "https://backend.xunarmand.uz/images/12.png",
-        "https://backend.xunarmand.uz/images/13.png",
-        "https://backend.xunarmand.uz/images/14.png",
-        "https://backend.xunarmand.uz/images/15.png",
+        "https://backend.xunarmand.uz//images//10.png",
+        "https://backend.xunarmand.uz//images//11.png",
+        "https://backend.xunarmand.uz//images//12.png",
+        "https://backend.xunarmand.uz//images//13.png",
+        "https://backend.xunarmand.uz//images//14.png",
+        "https://backend.xunarmand.uz//images//15.png",
+        "https://backend.xunarmand.uz//images//1.png",
+        "https://backend.xunarmand.uz//images//2.png",
+        "https://backend.xunarmand.uz//images//3.png",
        
-        
-        
-        
+
+ 
     };
     
     public static List<string> Aksesuar = new List<string>()
     {
-        "https://backend.xunarmand.uz/images/bag.png",
-        "https://backend.xunarmand.uz/images/domik.jpg",
-        "https://backend.xunarmand.uz/images/haaa.jpg",
-        "https://backend.xunarmand.uz/images/kak.jpg",
-        "https://backend.xunarmand.uz/images/kakaa.jpg",
-        "https://backend.xunarmand.uz/images/kalen+4.jpg",
-        "https://backend.xunarmand.uz/images/kalen+turba.jpg",
-        "https://backend.xunarmand.uz/images/kalenaa.jpg",
-        "https://backend.xunarmand.uz/images/lang.jpg",
-        "https://backend.xunarmand.uz/images/qwrwq.jpg",
-
-        "https://backend.xunarmand.uz/images/shabka.jpg",
-        "https://backend.xunarmand.uz/images/slif.jpg",
-        "https://backend.xunarmand.uz/images/sliflar.jpg",
-        "https://backend.xunarmand.uz/images/traynik.jpg",
-        "https://backend.xunarmand.uz/images/traynik+2.jpg",
-        "https://backend.xunarmand.uz/images/traynik+3.jpg",
+        "https://backend.xunarmand.uz//images//bag.png",
+        "https://backend.xunarmand.uz//images//domik.png",
+        "https://backend.xunarmand.uz//images//haaa.png",
+        "https://backend.xunarmand.uz//images//kak.png",
+        "https://backend.xunarmand.uz//images//kakaa.png",
+        "https://backend.xunarmand.uz//images//kalen+4.png",
+        "https://backend.xunarmand.uz//images//kalen+turba.png",
+        "https://backend.xunarmand.uz//images//kalenaa.png",
+        "https://backend.xunarmand.uz//images//kalenadede.png",
+        "https://backend.xunarmand.uz//images//kotta kalen.png",
+        "https://backend.xunarmand.uz//images//lang.png",
+        "https://backend.xunarmand.uz//images//qwrwq.png",
+        "https://backend.xunarmand.uz//images//shabka.png",
+        "https://backend.xunarmand.uz//images//slif.png",
+        "https://backend.xunarmand.uz//images//traynik.png",
+        "https://backend.xunarmand.uz//images//traynik+2.png",
+        "https://backend.xunarmand.uz//images//traynik+3.png",
+        "https://backend.xunarmand.uz//images//turbalar.png",
+        "https://backend.xunarmand.uz//images//tutu.png",
+        "https://backend.xunarmand.uz//images//Screenshot 2024-09-26 102841.png",
+        "https://backend.xunarmand.uz//images//traynik+2.png",
 
 
         
@@ -116,7 +112,17 @@ internal class Program
     };
     public static List<string> Gumbaz = new List<string>()
     {
-        "https://backend.xunarmand.uz/images/f_manapov.jpg",
+        "https://backend.xunarmand.uz//images//kran.jpg",
+        "https://backend.xunarmand.uz//images//qoyliqmasjid.jpg",
+        "https://backend.xunarmand.uz//images//dilime.jpg",
+        "https://backend.xunarmand.uz//images//f_manapov.jpg",
+        "https://backend.xunarmand.uz//images//gold.jpg",
+        "https://backend.xunarmand.uz//images//misgumbza.jpg",
+        "https://backend.xunarmand.uz//images//qoyliq.jpg",
+        "https://backend.xunarmand.uz//images//ray.jpg",
+        "https://backend.xunarmand.uz//images//raysentr.jpg",
+        "https://backend.xunarmand.uz//images//suni yonidi masjid.jpg",
+        "https://backend.xunarmand.uz//images//yangbozor_oq.jpg",
         
     };
     
@@ -125,7 +131,7 @@ internal class Program
     private static async Task Main(string[] args)
 
     {
-        var botClient = new TelegramBotClient("6914260630:AAEqHMKLA3kFD_4Rcd8wMPqGOwa-GfBlWH8");
+        var botClient = new TelegramBotClient("8055760938:AAF53YO-qKvmAHnTuohg9l8Il3mTZVBYhgg");
 
 
         using CancellationTokenSource cts = new();
@@ -169,123 +175,6 @@ internal class Program
         async Task HandleCallbackQueryAsync(ITelegramBotClient botClient, Update update,
             CancellationToken cancellationToken)
         {
-            if (update.CallbackQuery.Data == "c1")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  10.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e davom atamizmi",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c2")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  20.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c3")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  30.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c4")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  40.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c5")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  50.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c6")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  60.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c7")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  70.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c8")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  80.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c9")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  90.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
             if (update.CallbackQuery.Data == "c10")
             {
                 string savat_cola = $"Coca Cola 0.5l \n  100.000 som";
@@ -298,122 +187,45 @@ internal class Program
                     text: "e qoyil",
                     cancellationToken: cancellationToken);
             }
-
-            if (update.CallbackQuery.Data == "o2")
+            
+            if (update.CallbackQuery.Data == "location")
             {
-                string savat_cola = $" Milliy osh \n  70.000 som ";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
+                Message sendTextMessageAsync =await botClient.SendTextMessageAsync(
                     chatId: id_user,
-                    text: " xosh yana nima olamiz",
-                    cancellationToken: cancellationToken);
+                    text: "Bizning joy:Toshkent viloyati, Zangiota tumani"
+                );
             }
-
-            if (update.CallbackQuery.Data == "d3")
+            else if (update.CallbackQuery.Data == "phone")
             {
-                string savat_cola = $"Doda Milliy maxsulot \n  90.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
+                Message sendTextMessageAsync =await botClient.SendTextMessageAsync(
                     chatId: id_user,
-                    text: "yana nima olamiz",
-                    cancellationToken: cancellationToken);
+                    text: "Telefon: +998 33 011 71 11 Abduqodir."
+                );
             }
-
-            if (update.CallbackQuery.Data == "c4")
+            else if (update.CallbackQuery.Data == "map")
             {
-                string savat_cola = $"Coca Cola 0.5l \n  40.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
+                Message message = await botClient.SendLocationAsync(
                     chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
+                    latitude: 41.224508,
+                    longitude: 69.131200
+                );
             }
-
-            if (update.CallbackQuery.Data == "c5")
+            else if (update.CallbackQuery.Data == "maslaxat")
             {
-                string savat_cola = $"Coca Cola 0.5l \n  50.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
+                var message = await botClient.SendTextMessageAsync(
                     chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
+                    text: "Sizga Tez Orada Aloqaga Chiqamiz. Bizga Ishonch Bildirganingiz Uchun Tashakkur! Yanada Qulayroq --> [Xunarmand.uz](https://xunarmand.uz)",
+                    parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown
+                );
             }
-
-            if (update.CallbackQuery.Data == "c6")
+            else if (update.CallbackQuery.Data == "buyurtma")
             {
-                string savat_cola = $"Coca Cola 0.5l \n  60.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
+                var message = await botClient.SendTextMessageAsync(
                     chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
+                    text: "Sizga Tez Orada Aloqaga Chiqamiz. Bizga Ishonch Bildirganingiz Uchun Tashakkur! Yanada Qulayroq --> [Xunarmand.uz](https://xunarmand.uz)",
+                    parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown
+                );
 
-            if (update.CallbackQuery.Data == "c7")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  70.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c8")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  80.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c9")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  90.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
-            }
-
-            if (update.CallbackQuery.Data == "c10")
-            {
-                string savat_cola = $"Coca Cola 0.5l \n  100.000 som";
-
-                Savatcha.Add(savat_cola);
-
-
-                Message sentMessage1 = await botClient.SendTextMessageAsync(
-                    chatId: id_user,
-                    text: "e qoyil",
-                    cancellationToken: cancellationToken);
             }
         }
 
@@ -437,7 +249,7 @@ internal class Program
 
                 Message sentMessage = await botClient.SendTextMessageAsync(
                     chatId: update.Message.Chat.Id,
-                    text: "Salom Qalysiz Contack Kiriting?",
+                    text: "Hush Kelibsiz Contactni Kiriting?",
                     replyMarkup: replyKeyboardMarkup,
                     cancellationToken: cancellationToken);
             }
@@ -475,6 +287,7 @@ internal class Program
                 }
                 else
                 {
+                    Writ_Json.Write(update.Message.Contact);
                     var replyKeyboard = new ReplyKeyboardMarkup(
                         new List<KeyboardButton[]>()
                         {
@@ -486,7 +299,6 @@ internal class Program
                             new KeyboardButton[]
                             {
                                 new KeyboardButton("Savat📥"),
-                                new KeyboardButton("All Order Pdf"),
                             },
                         })
                     {
@@ -494,7 +306,7 @@ internal class Program
                     };
                     Message sentMessage = await botClient.SendTextMessageAsync(
                         chatId: update.Message.Chat.Id,
-                        text: "User Hushkelibsiz",
+                        text: "Hushkelibsiz",
                         replyMarkup: replyKeyboard,
                         cancellationToken: cancellationToken);
                 }
@@ -512,7 +324,6 @@ internal class Program
                             {
                                 new KeyboardButton("Menu"),
                                 new KeyboardButton("Product"),
-                                new KeyboardButton("PayType"),
                             },
                             new KeyboardButton[]
                             {
@@ -542,7 +353,6 @@ internal class Program
                             {
                                 new KeyboardButton("Menu"),
                                 new KeyboardButton("Aloqa"),
-                                new KeyboardButton("PayType"),
                             },
                         })
                     {
@@ -558,23 +368,60 @@ internal class Program
 
             if (update.Message.Text == "Turubalar")
             {
-                Message sentMessage = await botClient.SendPhotoAsync(
-                    chatId: update.Message.Chat.Id,
-                    photo: InputFileUrl.FromUri("https://backend.xunarmand.uz/images/turba96qizl.png"),
-                    caption: "Coca Cola 0.5l \n 10.000 \n Nechta olmoqchisz tanlang",
-                    cancellationToken: cancellationToken);
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+                {
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Buyurtma berish", "buyurtma"),
+                        InlineKeyboardButton.WithCallbackData("Maslaxat olish", "maslaxat"),
+                        InlineKeyboardButton.WithCallbackData("Aloqa", "phone"),
+                        
+                    }
+                });
+
+                try
+                {
+                    for (int i = 0; i < Turuba.Count; i++)
+                    {
+                        Message sentMessage = await botClient.SendPhotoAsync(
+                            chatId: update.Message.Chat.Id,
+                            photo:new InputFileUrl(new Uri( Turuba[i])),
+                            caption: "Bu turubalar TARNOV , SLIFLAR   uchun ishlatiladi.",
+                            replyMarkup: inlineKeyboard,
+                            cancellationToken: cancellationToken);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await botClient.SendTextMessageAsync(
+                        chatId: update.Message.Chat.Id,
+                        text: $"Xato yuz berdi: {ex.Message}",
+                        cancellationToken: cancellationToken);
+                }
+                
             }
 
             if (update.Message.Text == "Demaxodlar")
             {
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+                {
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Buyurtma berish", "buyurtma"),
+                        InlineKeyboardButton.WithCallbackData("Maslaxat olish", "maslaxat"),
+                        InlineKeyboardButton.WithCallbackData("Aloqa", "phone"),
+                        
+                    }
+                });
                 try
                 {
                     for (int i = 0; i < Demaxod.Count; i++)
                     {
                         Message sentMessage = await botClient.SendPhotoAsync(
                             chatId: update.Message.Chat.Id,
-                            photo:InputFileUrl.FromUri("https://backend.xunarmand.uz/images/di1.png"),
-                            caption: "Pepsi 0.5l \n 10.000",
+                            photo:new InputFileUrl(new Uri( Demaxod[i])),
+                            caption: "Bu Demaxodlar o'choq qozonlar uchun Kafega va Hovlilarga yasaladi",
+                            replyMarkup: inlineKeyboard,
                             cancellationToken: cancellationToken);
                     }
                 }
@@ -590,45 +437,125 @@ internal class Program
 
             if (update.Message.Text == "Gumbazlar")
             {
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+                {
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Buyurtma berish", "buyurtma"),
+                        InlineKeyboardButton.WithCallbackData("Maslaxat olish", "maslaxat"),
+                        InlineKeyboardButton.WithCallbackData("Aloqa", "phone"),
+                        
+                    }
+                });
                 for(int i=0;i<Gumbaz.Count;i++)
                 {
                     
                     Message sentMessage = await botClient.SendPhotoAsync(
                         chatId: update.Message.Chat.Id,
-                        photo: InputFileUrl.FromUri("https://backend.xunarmand.uz/images/f_manapov.jpg"),
-                        caption: "Pepsi 0.5l \n 10.000",
+                        photo: InputFileUrl.FromUri(Gumbaz[i]),
+                        caption: "Masjidlar uchun Loyixalash Qurish Tamirlash Gumbazlar",
+                        replyMarkup: inlineKeyboard,
                         cancellationToken: cancellationToken);
                 }
             }
 
             if (update.Message.Text == "Aksesuarlar")
-            {
-                Message sentMessage = await botClient.SendPhotoAsync(
-                    chatId: update.Message.Chat.Id,
-                    photo: InputFileUrl.FromUri(
-                        "https://www.google.com/imgres?imgurl=https%3A%2F%2Fzamin.uz%2Fuploads%2Fposts%2F2018-01%2F1516629364_24_10-6-d0b8d0b7-61-810x608.jpg&imgrefurl=https%3A%2F%2Fzamin.uz%2Fuz%2Fjamiyat%2F30956-flesh-ichimligi-halolmi.html&docid=ARA8jp7GwchjkM&tbnid=cdF7dxatMwwuBM&vet=12ahUKEwis_NPMwI6EAxUQh68BHb4WCZkQM3oECDMQAA..i&w=620&h=465&ved=2ahUKEwis_NPMwI6EAxUQh68BHb4WCZkQM3oECDMQAA"),
-                    caption: "Flash \n 10.000",
-                    cancellationToken: cancellationToken);
+            { 
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+                {
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Buyurtma berish", "buyurtma"),
+                        InlineKeyboardButton.WithCallbackData("Maslaxat olish", "maslaxat"),
+                        InlineKeyboardButton.WithCallbackData("Aloqa", "phone"),
+                        
+                    }
+                });
+                try
+                {
+                    for (int i = 0; i < Aksesuar.Count; i++)
+                    {
+                        Message sentMessage = await botClient.SendPhotoAsync(
+                            chatId: update.Message.Chat.Id,
+                            photo:new InputFileUrl(new Uri( Aksesuar[i])),
+                            caption: "Bu Aksusuarlar Dokonimizda bor mahsulotlar",
+                            replyMarkup: inlineKeyboard,
+                            cancellationToken: cancellationToken);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await botClient.SendTextMessageAsync(
+                        chatId: update.Message.Chat.Id,
+                        text: $"Xato yuz berdi: {ex.Message}",
+                        cancellationToken: cancellationToken);
+                }
             }
 
             if (update.Message.Text == "Profnastillar")
             {
-                Message sentMessage = await botClient.SendPhotoAsync(
-                    chatId: update.Message.Chat.Id,
-                    photo: InputFileUrl.FromUri(
-                        "https://www.google.com/imgres?imgurl=https%3A%2F%2Fzamin.uz%2Fuploads%2Fposts%2F2018-01%2F1516629364_24_10-6-d0b8d0b7-61-810x608.jpg&imgrefurl=https%3A%2F%2Fzamin.uz%2Fuz%2Fjamiyat%2F30956-flesh-ichimligi-halolmi.html&docid=ARA8jp7GwchjkM&tbnid=cdF7dxatMwwuBM&vet=12ahUKEwis_NPMwI6EAxUQh68BHb4WCZkQM3oECDMQAA..i&w=620&h=465&ved=2ahUKEwis_NPMwI6EAxUQh68BHb4WCZkQM3oECDMQAA"),
-                    caption: "Flash \n 10.000",
-                    cancellationToken: cancellationToken);
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+                {
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Buyurtma berish", "buyurtma"),
+                        InlineKeyboardButton.WithCallbackData("Maslaxat olish", "maslaxat"),
+                        InlineKeyboardButton.WithCallbackData("Aloqa", "phone"),
+                        
+                    }
+                });
+                try
+                {
+                    for (int i = 0; i < Profnastil.Count; i++)
+                    {
+                        Message sentMessage = await botClient.SendPhotoAsync(
+                            chatId: update.Message.Chat.Id,
+                            photo:new InputFileUrl(new Uri( Profnastil[i])),
+                            caption: "Toshkentda tom yopish uchun gofrokarton var Profnastil har xil maxsulotlardan foydalaniladi.",
+                            replyMarkup: inlineKeyboard,
+                            cancellationToken: cancellationToken);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await botClient.SendTextMessageAsync(
+                        chatId: update.Message.Chat.Id,
+                        text: $"Xato yuz berdi: {ex.Message}",
+                        cancellationToken: cancellationToken);
+                }
             }
 
             if (update.Message.Text == "Vintilatsiyalar")
             {
-                Message sentMessage = await botClient.SendPhotoAsync(
-                    chatId: update.Message.Chat.Id,
-                    photo: InputFileUrl.FromUri(
-                        "https://www.google.com/imgres?imgurl=https%3A%2F%2Fzamin.uz%2Fuploads%2Fposts%2F2018-01%2F1516629364_24_10-6-d0b8d0b7-61-810x608.jpg&imgrefurl=https%3A%2F%2Fzamin.uz%2Fuz%2Fjamiyat%2F30956-flesh-ichimligi-halolmi.html&docid=ARA8jp7GwchjkM&tbnid=cdF7dxatMwwuBM&vet=12ahUKEwis_NPMwI6EAxUQh68BHb4WCZkQM3oECDMQAA..i&w=620&h=465&ved=2ahUKEwis_NPMwI6EAxUQh68BHb4WCZkQM3oECDMQAA"),
-                    caption: "Flash \n 10.000",
-                    cancellationToken: cancellationToken);
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
+                {
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Buyurtma berish", "buyurtma"),
+                        InlineKeyboardButton.WithCallbackData("Maslaxat olish", "maslaxat"),
+                        InlineKeyboardButton.WithCallbackData("Aloqa", "phone"),
+                        
+                    }
+                });
+                try
+                {
+                    for (int i = 0; i < Vintilatsa.Count; i++)
+                    {
+                        Message sentMessage = await botClient.SendPhotoAsync(
+                            chatId: update.Message.Chat.Id,
+                            photo:new InputFileUrl(new Uri( Vintilatsa[i])),
+                            caption: "Bu Vintilatsiya Havo tortish uchun ishlatiladi",
+                            replyMarkup: inlineKeyboard,
+                            cancellationToken: cancellationToken);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await botClient.SendTextMessageAsync(
+                        chatId: update.Message.Chat.Id,
+                        text: $"Xato yuz berdi: {ex.Message}",
+                        cancellationToken: cancellationToken);
+                }
             }
 
             //produc
@@ -666,31 +593,27 @@ internal class Program
                     cancellationToken: cancellationToken);
             }
 
-
-            if (update.Message.Text == "PayType")
+            if (update.Message.Text == "Aloqa")
             {
-                var replyKeyboard = new ReplyKeyboardMarkup(
-                    new List<KeyboardButton[]>()
-                    {
-                        new KeyboardButton[]
-                        {
-                            new KeyboardButton("NAQD"),
-                            new KeyboardButton("CliCk"),
-                            new KeyboardButton("PAYMEq"),
-                            new KeyboardButton("Exit 💰"),
-                        },
-                    })
+                var inlineKeyboard = new InlineKeyboardMarkup(new[]
                 {
-                    ResizeKeyboard = true,
-                };
-
+                    new[]
+                    {
+                        InlineKeyboardButton.WithCallbackData("Joy nomi", "location"),
+                        InlineKeyboardButton.WithCallbackData("Telefon raqami", "phone"),
+                        InlineKeyboardButton.WithCallbackData("Lokatsiya", "map")
+                    }
+                });
 
                 Message sentMessage = await botClient.SendTextMessageAsync(
                     chatId: update.Message.Chat.Id,
-                    text: "Choose a response",
-                    replyMarkup: replyKeyboard,
-                    cancellationToken: cancellationToken);
+                    text: "Qaysi ma'lumotni ko‘rishni istaysiz?",
+                    replyMarkup: inlineKeyboard
+                );
             }
+
+
+     
 
             if (update.Message.Text == "OrderStatus")
             {
@@ -718,28 +641,6 @@ internal class Program
             }
 
             //Change  status
-            if (update.Message.Text == "Bu_Sni_Oz")
-            {
-                var replyKeyboard = new ReplyKeyboardMarkup(
-                    new List<KeyboardButton[]>()
-                    {
-                        new KeyboardButton[]
-                        {
-                            new KeyboardButton("Chenge Status"),
-                            new KeyboardButton("Exit 💰"),
-                        },
-                    })
-                {
-                    ResizeKeyboard = true,
-                };
-
-
-                Message sentMessage = await botClient.SendTextMessageAsync(
-                    chatId: update.Message.Chat.Id,
-                    text: "Choose a response",
-                    replyMarkup: replyKeyboard,
-                    cancellationToken: cancellationToken);
-            }
 
             if (update.Message.Text == "ALl Order Excel file")
             {
